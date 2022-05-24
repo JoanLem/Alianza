@@ -1,4 +1,4 @@
-<div class="nav-bar">
+<!-- <div class="nav-bar">
   <img src="./assets/alianza.png" alt="" />
   <h2>{{ title }}</h2>
   <ul class="nav flex-column">
@@ -17,4 +17,47 @@
       <a class="nav-link" routerLink="/">Emergency PIN history</a>
     </li>
   </ul>
+</div> -->
+<div class="nav-bar p-2">
+  <div class="img">
+    <img src="./assets/alianza.png" alt="" />
+    <div>
+      <h2>{{ title }}</h2>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"
+      ><div class="img-brand">
+        <img src="./assets/alianza.png" alt="" /></div
+    ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/clients"
+            >Clients</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Client look history</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Emergency PIN configuration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Emergency PIN history</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>

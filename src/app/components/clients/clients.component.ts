@@ -40,18 +40,15 @@ export class ClientsComponent implements OnInit {
       dataAdded: [''],
     })),
       this.getAllClients();
-    // this.subscription = this.clientsService.refresh$.subscribe(() => {
-    //   this.getClients();
-    // });
   }
 
   getAllClients() {
     this.clientsService.getAllClients().subscribe(
       (resp) => {
         this.clients = resp.data;
-        if (resp.data.length > 0) {
+        if (resp.data.length >= 0) {
           this.mensajeBusqueda =
-            'No tenemos clientes vinculados, registra uno dando en el boton New';
+            'Registra un cliente pulsando en el boton "New"';
         }
       },
       (error) => {

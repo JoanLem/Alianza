@@ -1,4 +1,46 @@
-.container {
-  /* background-color: blue; */
+.container-app {
   display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.nav-bar {
+  width: 20%;
+}
+.crud-client {
+  width: 80%;
+  height: 90%;
+}
+
+/* phone */
+@media (max-width: 481px) {
+  .container-app {
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+  }
+  .crud-client {
+    width: 100%;
+    height: 90%;
+  }
+  .nav-bar {
+    width: 100%;
+  }
+}
+
+/* table */
+@media (max-width: 990px) {
+  .container-app {
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+  }
+  .crud-client {
+    width: 100%;
+  }
+  .nav-bar {
+    width: 100%;
+  }
 }
