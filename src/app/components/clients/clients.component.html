@@ -65,10 +65,8 @@
             "
             class="alert alert-danger"
           >
-            Nombre es invalido.
-            <div *ngIf="clientForm.controls['name'].errors?.['minlength']">
-              Name is required.
-            </div>
+            Nombre es invalido. El campo no tiene el formato necesario, asegure
+            nombre sin caracteres especiales, espacios al inicio y numeros.
           </div>
 
           <label for="">phone</label

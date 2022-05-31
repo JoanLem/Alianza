@@ -32,7 +32,7 @@ export class ClientsComponent implements OnInit {
   ngOnInit() {
     (this.clientForm = this.fb.group({
       sharedKey: [''],
-      name: ['', Validators.required, Validators.minLength(3)],
+      name: ['', [Validators.required, Validators.pattern(/^\S[a-z ]{5,16}$/)]],
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       startDate: ['', Validators.required],
