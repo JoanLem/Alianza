@@ -130,7 +130,7 @@
   <!-- Tabla de clientes -->
   <h2>{{ titleTable }}</h2>
 
-  <div class="alert alert-info" role="alert" *ngIf="clients.length == 0">
+  <div class="alert alert-info" role="alert" *ngIf="clients?.length == 0">
     {{ mensajeBusqueda }}
   </div>
 

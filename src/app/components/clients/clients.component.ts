@@ -18,7 +18,7 @@ import { Subscription } from 'rxjs';
 })
 export class ClientsComponent implements OnInit {
   clientForm!: FormGroup;
-  clients: any;
+  clients: any = [];
   titleTable: string = 'Clients';
   closeResult: string = '';
   mensajeBusqueda: string = '';
@@ -43,18 +43,22 @@ export class ClientsComponent implements OnInit {
   }
 
   getAllClients() {
-    this.clientsService.getAllClients().subscribe(
-      (resp) => {
-        this.clients = resp.data;
-        if (resp.data.length >= 0) {
-          this.mensajeBusqueda =
-            'Registra un cliente pulsando en el boton "New"';
+    try {
+      this.clientsService.getAllClients().subscribe(
+        (resp) => {
+          this.clients = resp.data;
+          if (resp.data.length >= 0) {
+            this.mensajeBusqueda =
+              'Registra un cliente pulsando en el boton "New"';
+          }
+        },
+        (error) => {
+          console.error(error);
         }
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+      );
+    } catch (error) {
+      console.error('error try' + error);
+    }
   }
 
   open(content: any) {
