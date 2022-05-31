@@ -57,6 +57,19 @@
         <div class="mb-3">
           <label for="">nombre</label
           ><input type="text" class="form-control" formControlName="name" />
+          <div
+            *ngIf="
+              clientForm.controls['name'].invalid &&
+              (clientForm.controls['name'].dirty ||
+                clientForm.controls['name'].touched)
+            "
+            class="alert alert-danger"
+          >
+            Nombre es invalido.
+            <div *ngIf="clientForm.controls['name'].errors?.['minlength']">
+              Name is required.
+            </div>
+          </div>
 
           <label for="">phone</label
           ><input
@@ -73,6 +86,17 @@
             class="form-control"
             id=""
           />
+          <br />
+          <div
+            *ngIf="
+              clientForm.controls['email'].invalid &&
+              (clientForm.controls['email'].dirty ||
+                clientForm.controls['email'].touched)
+            "
+            class="alert alert-danger"
+          >
+            email invalido
+          </div>
 
           <label for="startDate">start date</label
           ><input
