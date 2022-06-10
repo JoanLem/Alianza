@@ -1,9 +1,0 @@
-.options {
-  width: 50%;
-}
-
-@media (max-width: 610px) {
-  .options {
-    width: 90%;
-  }
-}

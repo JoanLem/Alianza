@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientsComponent } from './components/clients/clients.component';
+
 
 const routes: Routes = [
-  { path: 'clients', component: ClientsComponent },
-  //   { path: '**', redirectTo: '/' },
+  // { path: 'clients', component: ClientsComponent },
+  { path: 'auth', loadChildren: ()=>import('./auth/auth.module').then(m => m.AuthModule )},
+  { path: 'products', loadChildren: ()=>import('./products/products.module').then(m => m.ProductsModule )},
+  { path: 'clients', loadChildren: ()=>import('./clients/clients.module').then(m => m.ClientsModule )},
+  { path: '**', redirectTo: 'auth' },
 ];
 
 @NgModule({

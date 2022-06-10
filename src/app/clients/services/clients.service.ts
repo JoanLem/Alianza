@@ -6,7 +6,7 @@ import { Observable, Subject, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class ClientsService {
-  private API_HOST = 'http://localhost:8080/clients';
+  private API_HOST = 'http://localhost:8082/clients';
 
   private _refresh$ = new Subject<void>();
 

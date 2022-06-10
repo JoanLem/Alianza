@@ -1,0 +1,16 @@
+img {
+    width: 10em;
+  }
+  .img-brand {
+    display: none;
+  }
+  
+  @media (max-width: 992px) {
+    .img-brand {
+      display: block;
+    }
+    .img {
+      display: none;
+    }
+  }
+  

@@ -8,14 +8,15 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ClientsService } from 'src/app/services/clients.service';
+import { ClientsService } from 'src/app/clients/services/clients.service';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css'],
+  styleUrls: ['./clients.component.css']
 })
+
 export class ClientsComponent implements OnInit {
   clientForm!: FormGroup;
   clients: any = [];
